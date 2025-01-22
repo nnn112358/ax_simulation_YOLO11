@@ -88,7 +88,6 @@ Detected: dining table: 0.72058 at bbox [0.4651, 297.65119, 424.11724, 234.34881
 
 ## Result
 
-![image](https://github.com/user-attachments/assets/72efdf9c-7c70-44a3-9615-3248f091be30)
 
 
 ## pulsar2 document 
