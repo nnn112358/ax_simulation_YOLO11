@@ -5,7 +5,7 @@ Simulate a depth anything using the M5Stack Module-LLM(ax630c) simulator pulsar2
 pulsar2 is a software environment released by axera-tech.<br>
 
 https://github.com/AXERA-TECH/pulsar2-docs-en<br>
-https://github.com/nnn112358/M5_LLM_Module_Report/blob/main/anysome_Module_LLM.md<br>
+
 ## How to
 
 Enter Docker in pulsar2
@@ -34,9 +34,7 @@ To run a simulation with a quantized axmodel
   --shape2 1 40 40 144 \
   --bin3 ./sim_outputs/0/_model_23_Concat_2_output_0.bin \
   --shape3 1 20 20 144
-```
 
-```
 # python pulsar2_run_postprosess_step2.py
 
 Detected: person: 0.74 at bbox [56.7180984740844, 112.75218599172513, 348.06386195841696, 303.03316560825033]
@@ -51,15 +49,14 @@ Detected: cup: 0.50 at bbox [87.9819399768678, 287.6912431998754, 31.01473977197
 Detected: bowl: 0.84 at bbox [1.0042724562208605, 403.4177083459919, 50.98300059557005, 51.009406323562075]
 Detected: bowl: 0.81 at bbox [103.8810495758662, 369.9760869148585, 115.12678531241363, 45.13749664559498]
 Detected: dining table: 0.70 at bbox [0.2316432501811505, 298.77209693371475, 424.13916019424505, 233.22790306628525]
+
 ```
 
 To perform a simulation with onnx before quantization
 
 ```
 # python pulsar2_run_preprocess_onnx.py
- pulsar2 run --model model/yolo11n_640x640_base.onnx --input_dir sim_inputs --output_dir sim_outputs --list list.txt
-
-
+# pulsar2 run --model model/yolo11n_640x640_base.onnx --input_dir sim_inputs --output_dir sim_outputs --list list.txt
 # python pulsar2_run_postprosess_step1.py \
   --model model/yolo11n_640x640_base.axmodel \
   --output-dir ./sim_outputs/0 \
@@ -70,13 +67,8 @@ To perform a simulation with onnx before quantization
   --shape2 1 144 40 40 \
   --bin3 ./sim_outputs/0/_model_23_Concat_2_output_0.bin \
   --shape3 1 144 20 20```
-
- python pulsar2_run_postprosess_step2.py 
-
-
-root@Thinkpad-T14:/data# python pulsar2_run_postprosess_step2_onnx.py
+# python pulsar2_run_postprosess_step2_onnx.py
 ===========================
-
 Detected: person: 0.74115 at bbox [30.31488, 111.136, 377.68982, 305.41906]
 Detected: person: 0.71921 at bbox [4.30747, 71.6025, 258.42159, 271.95329]
 Detected: person: 0.64091 at bbox [348.71344, 112.3502, 429.20841, 419.6498]
@@ -90,6 +82,7 @@ Detected: bowl: 0.84523 at bbox [103.54893, 369.82272, 114.96173, 45.48041]
 Detected: bowl: 0.83803 at bbox [0.17939, 402.96795, 51.86171, 51.8919]
 Detected: dining table: 0.72058 at bbox [0.4651, 297.65119, 424.11724, 234.34881]
 ===========================
+```
 
 
 
@@ -101,7 +94,7 @@ Detected: dining table: 0.72058 at bbox [0.4651, 297.65119, 424.11724, 234.34881
 ## pulsar2 document 
 
 ```
-# pulsar2 run -h
+ pulsar2 run -h
 usage: main.py run [-h] [--config] [--model] [--input_dir] [--output_dir] [--list] [--random_input ]
                    [--batch_size] [--enable_perlayer_output ] [--dump_with_stride ] [--group_index] [--mode]
                    [--target_hardware]
