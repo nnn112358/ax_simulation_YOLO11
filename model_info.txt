@@ -1,0 +1,16 @@
+ONNXモデル情報:
+モデルパス: model/yolo11n_640x640_base.axmodel
+
+出力テンソル情報:
+
+出力名: /model.23/Concat_output_0
+形状: [1, 80, 80, 144]
+データ型: float32
+
+出力名: /model.23/Concat_1_output_0
+形状: [1, 40, 40, 144]
+データ型: float32
+
+出力名: /model.23/Concat_2_output_0
+形状: [1, 20, 20, 144]
+データ型: float32
